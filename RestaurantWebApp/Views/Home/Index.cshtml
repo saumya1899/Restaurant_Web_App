@@ -2,8 +2,69 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/IndexCSSFile.css" />
 
+    <style>
+       
+        h2 {
+            border-bottom: 1px solid #000;
+            padding-bottom: 10px; 
+        }
+
+        .category-link {
+            text-decoration: none; 
+            color: inherit; 
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+
+        <h2>Discover Our Delicious Selections :</h2>
+        <div class="category-container">
+
+            <a href="@Url.Action("Appetizers", "Category")" class="category-link">
+            <div class="category">
+                <div class="category-icon">Category 1</div>
+                <div class="category-name">Appetizers</div>
+            </div>
+
+        </a>
+
+        <a href="@Url.Action("MainCourses", "Category")" class="category-link">
+            <div class="category">
+                <div class="category-icon">Category 2</div>
+                <div class="category-name">Main Courses</div>
+            </div>
+        </a>
+
+        <a href="@Url.Action("Desserts", "Category")" class="category-link">
+            <div class="category">
+                <div class="category-icon">Category 3</div>
+                <div class="category-name">Desserts</div>
+            </div>
+        </a>
+
+        <a href="@Url.Action("Beverages", "Category")" class="category-link">
+            <div class="category">
+                <div class="category-icon">Category 4</div>
+                <div class="category-name">Beverages</div>
+            </div>
+        </a>
+
+            
+
+        </div>
+    </div>
+
+</body>
+
+</html>

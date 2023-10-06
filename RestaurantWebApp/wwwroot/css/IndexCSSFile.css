@@ -1,0 +1,27 @@
+﻿.category-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    background-color: #f7f7f7;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.category-icon {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.category-name {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
