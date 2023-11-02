@@ -1,70 +1,150 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
-<html>
-<head>
-    <link rel="stylesheet" href="~/css/IndexCSSFile.css" />
-
-    <style>
-       
-        h2 {
-            border-bottom: 1px solid #000;
-            padding-bottom: 10px; 
+﻿
+@{
+            ViewData["Title"] = "Home Page";
         }
 
-        .category-link {
-            text-decoration: none; 
-            color: inherit; 
-            cursor: pointer;
-        }
 
-    </style>
+    <html>
+    <head>
 
-</head>
+        <link rel="stylesheet" href="~/css/indexCSSFile.css">
 
-<body>
 
-    <div class="text-center">
-        <h1 class="display-4">Welcome</h1>
+    </head>
 
-        <h2>Discover Our Delicious Selections :</h2>
-        <div class="category-container">
+    <body>
 
-            <a href="@Url.Action("Appetizers", "Category")" class="category-link">
-            <div class="category">
-                <div class="category-icon">Category 1</div>
-                <div class="category-name">Appetizers</div>
+        <div class="text-center">
+            <h1 class="display-4">Welcome</h1>
+
+            <!-- Add this form to create the search bar -->
+            <div class="search-container">
+                <form action="/action_page.php">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit">Submit</button>
+                </form>
             </div>
 
-        </a>
+            <h2>Discover Our Delicious Selections :</h2>
 
-        <a href="@Url.Action("MainCourses", "Category")" class="category-link">
-            <div class="category">
-                <div class="category-icon">Category 2</div>
-                <div class="category-name">Main Courses</div>
+            <div class="category-container">
+
+                <a href="@Url.Action("Appetizers", "Category")" class="category-link">
+                    <div class="category">
+                        <div class="category-icon">Category 1</div>
+                        <div class="category-name">Appetizers</div>
+                    </div>
+
+                </a>
+
+                <a href="@Url.Action("MainCourses", "Category")" class="category-link">
+                    <div class="category">
+                        <div class="category-icon">Category 2</div>
+                        <div class="category-name">Main Courses</div>
+                    </div>
+                </a>
+
+                <a href="@Url.Action("Desserts", "Category")" class="category-link">
+                    <div class="category">
+                        <div class="category-icon">Category 3</div>
+                        <div class="category-name">Desserts</div>
+                    </div>
+                </a>
+
+                <a href="@Url.Action("Beverages", "Category")" class="category-link">
+                    <div class="category">
+                        <div class="category-icon">Category 4</div>
+                        <div class="category-name">Beverages</div>
+                    </div>
+                </a>
+
+
+
             </div>
-        </a>
 
-        <a href="@Url.Action("Desserts", "Category")" class="category-link">
-            <div class="category">
-                <div class="category-icon">Category 3</div>
-                <div class="category-name">Desserts</div>
+
+            <h2>Top Dishes</h2>
+
+            <div class="top-dishes">
+                <div class="dish">
+                    <img src="path_to_dish_image_1" alt="Dish Name 1">
+                    <h3>Dish Name 1</h3>
+                    <button>Add to Favorites</button>
+                    <button>Add to Cart</button>
+                </div>
+
+
+
+                <div class="dish">
+                    <img src="path_to_dish_image_2" alt="Dish Name 2">
+                    <h3>Dish Name 2</h3>
+                    <button>Add to Favorites</button>
+                    <button>Add to Cart</button>
+                </div>
+
+
+
+                <div class="dish">
+                    <img src="path_to_dish_image_2" alt="Dish Name 3">
+                    <h3>Dish Name 3</h3>
+                    <button>Add to Favorites</button>
+                    <button>Add to Cart</button>
+                </div>
+
+
+                <div class="dish">
+                    <img src="path_to_dish_image_2" alt="Dish Name 4">
+                    <h3>Dish Name 4</h3>
+                    <button>Add to Favorites</button>
+                    <button>Add to Cart</button>
+                </div>
+
+
+
+                <div class="dish">
+                    <img src="path_to_dish_image_2" alt="Dish Name 4">
+                    <h3>Dish Name 4</h3>
+                    <button>Add to Favorites</button>
+                    <button>Add to Cart</button>
+                </div>
+
+
+                <div class="dish">
+                    <img src="path_to_dish_image_2" alt="Dish Name 5">
+                    <h3>Dish Name 5</h3>
+                    <button>Add to Favorites</button>
+                    <button>Add to Cart</button>
+                </div>
+
+                <div class="dish">
+                    <img src="path_to_dish_image_2" alt="Dish Name 6">
+                    <h3>Dish Name 6</h3>
+                    <button>Add to Favorites</button>
+                    <button>Add to Cart</button>
+                </div>
+
+                <div class="dish">
+                    <img src="path_to_dish_image_2" alt="Dish Name 7">
+                    <h3>Dish Name 7</h3>
+                    <button>Add to Favorites</button>
+                    <button>Add to Cart</button>
+                </div>
+
+                <div class="dish">
+                    <img src="path_to_dish_image_2" alt="Dish Name 8">
+                    <h3>Dish Name 8</h3>
+                    <button>Add to Favorites</button>
+                    <button>Add to Cart</button>
+                </div>
+
             </div>
-        </a>
 
-        <a href="@Url.Action("Beverages", "Category")" class="category-link">
-            <div class="category">
-                <div class="category-icon">Category 4</div>
-                <div class="category-name">Beverages</div>
-            </div>
-        </a>
-
-            
 
         </div>
-    </div>
 
-</body>
 
-</html>
+
+    </body>
+
+    </html>
+

@@ -25,3 +25,87 @@
     font-size: 24px;
     margin-bottom: 10px;
 }
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+h2 {
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+}
+
+.category-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.top-dishes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dish {
+    flex: 0 0 calc(33.33% - 20px);
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+    .dish:hover {
+        transform: scale(1.05);
+
+    }
+
+    .dish img {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .dish h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    .dish button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px 0;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        .dish button:hover {
+            background-color: #45a049;
+        }
+
+
+
+
+
+
+
+
