@@ -1,0 +1,59 @@
+﻿/* Style the menu items */
+.menu-section {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+}
+
+.menu-section li {
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    flex: 0 0 calc(33.33% - 20px); /* Distribute items equally in a row with some margin */
+    transition: transform 0.2s; /* Add a transition effect for the scale */
+}
+
+.menu-section li:hover {
+    transform: scale(1.05); /* Scale up the item on hover */
+}
+
+.menu-section h2 {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.menu-section h3 {
+    color: #333;
+}
+
+.menu-section p {
+    color: #666;
+}
+
+.menu-section a {
+    display: block;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.menu-section a:hover {
+    background-color: #555;
+}
+
+/* Add a line between sections */
+.menu-section h2:not(:first-child) {
+    border-top: 1px solid #ccc;
+}
