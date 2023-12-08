@@ -1,0 +1,51 @@
+﻿@page
+@model RestaurantWebApp.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<link rel="stylesheet" href="/css/site.css"/>
+
+<div class="header">
+    <a href=""><img src="/images/logo.webp" alt="Company Logo" style="height: 200px;"></a>
+    <a href="">ABOUT</a>
+    <a href="">MENU</a>
+    <a href="">LOCATIONS</a>
+    <a href="">CONTACT</a>
+    <a href="" class="split"><img src="/images/shoppingcart.png" alt="Shopping Cart" style="border-radius: 40pt;height: 100px;"></a>
+</div>
+
+<div class="container">
+    <div class="divider">MENU</div>
+    <div class="grid"></div>
+</div>
+
+<script src="/js/site.js"></script>
+
+<!-- Form to add a new product -->
+<form method="post" asp-page-handler="AddProduct">
+    <input type="text" name="ItemName" placeholder="Product Name" />
+    <!-- Add other fields as necessary -->
+    <button type="submit">Add Product</button>
+</form>
+
+<!-- Form to wipe the database -->
+<form method="post" asp-page-handler="WipeDatabase" onsubmit="return confirm('Wipe the database?');">
+    <button type="submit">Wipe Database</button>
+</form>
+
+<!-- Button to refresh the page (optional) -->
+<form method="get">
+    <button type="submit">Refresh Table</button>
+</form>
+
+<!-- Table displaying products -->
+<table>
+    @foreach (var item in Model.Items)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <!-- Other columns -->
+        </tr>
+    }
+</table>
