@@ -1,0 +1,39 @@
+﻿@model RestaurantWebApp.Models.IndexViewModel
+@{
+            ViewData["Title"] = "Home Page";
+}
+<script>
+    var startId = 00;
+    var endId = 1000;
+    var isCart = true;
+</script>
+
+
+
+<div class="containerForMenu" style="padding-bottom: 20vh;">
+    <div style="width: 100%; text-align: left;">
+        <a href="javascript:history.back()" class="back-button"> &lt; Back</a>
+    </div>
+    <div class="divider">YOUR CART</div>
+    <div class="grid"></div>
+
+        
+<div style="height: 150px; width: 100%;"></div>
+
+
+    <form method="post" asp-action="AddProduct">
+        <div class="divider">SUBTOTAL: $<span id="subtotalDisplay">0</span></div><br />
+        <input type="hidden" id="subtotal" name="orderSubtotal" value="0">
+        <input type="hidden" id="orderJSON" name="orderJSON" value="Placeholder" />
+        <label for="orderCustomerName" style="font-size: 30pt; color: white;">Enter a name for the order: </label>
+        <input type="text" style="margin-left: 25%; margin-right: 25%; width: 50%; font-size: 30pt;" class="form-control" id="orderCustomerName" name="orderCustomerName" value=" " /><br />
+        <button type="submit" class="btn btn-success" style="width: 50%; padding-top: 2%; padding-bottom: 2%; font-size: 30pt;">Confirm Order</button>
+    </form>
+
+
+
+</div>
+
+
+    
+

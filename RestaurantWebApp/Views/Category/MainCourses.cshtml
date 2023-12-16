@@ -1,26 +1,66 @@
-﻿@{
+﻿@model RestaurantWebApp.Models.IndexViewModel
+@{
     ViewData["Title"] = "MainCourses";
 }
 
 
+<script>
+    var startId = 10;
+    var endId = 19;
+    var isCart = false;
+</script>
 
 
 
-<html>
-<head>
-
-    <link rel="stylesheet" href="~/css/CategoryCSSFile.css">
-
-
-</head>
-<body>
-    <a href="javascript:history.back()" class="back-button"> &lt; Back</a>
-
-    <h1>@ViewData["Title"]</h1>
-
-    <p>Sorry for the inconvinence we are under maintainance.</p>
+<div class="containerForMenu">
+    <div style="width: 100%; text-align: left;">
+        <a href="javascript:history.back()" class="back-button"> &lt; Back</a>
+    </div>
+    <h1 class="display-4" style="color:white">MENU</h1>
+    <h2 style="color:white; font-style: italic; font-weight: lighter;">Discover Our Delicious Selections :</h2>
 
 
-</body>
+    <br />
 
-</html>
+    <div class="category-container">
+        <a href="@Url.Action("Appetizers", "Category")" class="category-link btn-secondary">
+            <div class="category">
+                <div class="category-icon"></div>
+                <div class="category-name">Appetizers</div>
+            </div>
+
+        </a>
+
+        <a href="@Url.Action("MainCourses", "Category")" class="category-link btn-secondary" style="color: black; background-color: white">
+            <div class="category">
+                <div class="category-icon"></div>
+                <div class="category-name">Main Courses</div>
+            </div>
+        </a>
+
+        <a href="@Url.Action("Desserts", "Category")" class="category-link btn-secondary">
+            <div class="category">
+                <div class="category-icon"></div>
+                <div class="category-name">Desserts</div>
+            </div>
+        </a>
+
+        <a href="@Url.Action("Beverages", "Category")" class="category-link btn-secondary">
+            <div class="category">
+                <div class="category-icon"></div>
+                <div class="category-name">Beverages</div>
+            </div>
+        </a>
+    </div>
+
+    <br />
+
+    <div style="height: 100px; width: 100%;"></div>
+
+    <div class="grid"></div>
+
+    <div style="height: 150px; width: 100%;"></div>
+
+    <a href="@Url.Action("Cart", "Home")" class="btn btn-primary" style="width: 50%; padding-top: 2%; padding-bottom: 2%; font-size: 30pt;">Place Order</a>
+</div>
+
