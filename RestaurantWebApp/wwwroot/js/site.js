@@ -16,6 +16,8 @@ const products = [
     { id: 31, name: "Green Tea", price: "$1.99", image: "/images/product31.png" },
 
 ];
+// The images in the /images folder of the food items are from DALLE3 for mocking up the design.
+
 var subtotal = 0.0;
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -72,10 +74,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
     if (document.getElementById("subtotal") != null) {
-        document.getElementById("subtotal").value = subtotal;
+        document.getElementById("subtotal").value = subtotal.toFixed(2);
     }
     if (document.getElementById("subtotalDisplay") != null) {
-        document.getElementById("subtotalDisplay").innerText = subtotal;
+        document.getElementById("subtotalDisplay").innerText = subtotal.toFixed(2);
     }
 
     initializeQuantityControls();
